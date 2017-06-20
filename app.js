@@ -15,10 +15,9 @@ var  express            = require("express"),
      
      
      
-//testing
-mongoose.connect(process.env.DATABASEURL);
-//deploying
-// mongoose.connect("mongodb://belly:belly@ds133192.mlab.com:33192/yelp_camp2");
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+mongoose.connect(url);
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
