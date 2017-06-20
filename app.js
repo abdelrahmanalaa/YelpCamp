@@ -16,7 +16,8 @@ var  express            = require("express"),
      
      
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+// mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://belly:belly@ds133192.mlab.com:33192/yelp_camp2");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
